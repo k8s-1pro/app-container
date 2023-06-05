@@ -1,2 +1,2 @@
-docker build -t 1pro/app:v1 ./docker
+docker build -t 1pro/app:v1 ./build/docker
 docker push 1pro/app:v1
