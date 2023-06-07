@@ -1,6 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app: app
+    heritage: 1pro
   name: app
 spec:
   selector:
@@ -17,3 +20,8 @@ spec:
       containers:
         - name: app
           image: 1pro/app:v1
+      resources:
+        requests:
+          memory: 200Mi
+        limits:
+          memory: 200Mi
