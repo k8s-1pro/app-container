@@ -19,7 +19,8 @@ spec:
     spec:
       containers:
         - name: app
-          image: 1pro/app:v1
+          image: 1pro/app
+          imagePullPolicy: Always
           resources:
             requests:
               memory: "200Mi"
