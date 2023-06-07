@@ -2,23 +2,35 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: app
+    part: 1
+    section: 2
+    class: 2
+    step: 1
+    app: app-1-2-2-1
     heritage: 1pro
-  name: app
+  name: app-1-2-2-1
 spec:
   selector:
     matchLabels:
-      type: app
+      part: 1
+      section: 2
+      class: 2
+      step: 1
+      app: app-1-2-2-1
   replicas: 2
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        type: app
+        part: 1
+        section: 2
+        class: 2
+        step: 1
+        app: app-1-2-2-1
     spec:
       containers:
-        - name: app
+        - name: app-1-2-2-1
           image: 1pro/app
           imagePullPolicy: Always
           resources:
